@@ -1,16 +1,31 @@
-<div class="container">
-    <h1 id="valentineTitle"></h1>
-    
-    <div class="gif_container">
-        <img id="mainGif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpobjZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute Bear">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? 💝</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="valentineTitle">Loading...</h1>
+        
+        <div class="gif_container">
+            <img id="mainGif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpobjZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute Bear">
+        </div>
+
+        <div class="buttons">
+            <button class="cute-btn yes-btn" onclick="handleYesClick()" id="yes-btn">Yes</button>
+            <button class="cute-btn no-btn" onclick="handleNoClick()" id="no-btn">No</button>
+        </div>
+
+        <audio id="bgMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
     </div>
 
-    <div class="buttons">
-        <button class="cute-btn yes-btn" onclick="handleYesClick()" id="yes-btn">Yes</button>
-        <button class="cute-btn no-btn" onclick="handleNoClick()" id="no-btn">No</button>
-    </div>
-
-    <audio id="bgMusic" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    </audio>
-</div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
