@@ -1,15 +1,11 @@
-// Function to update the title with the name from config
-function updateTitle() {
-    const titleElement = document.getElementById('valentineTitle');
-    if (titleElement && config.valentineName) {
-        titleElement.innerText = "Will you be my Valentine, " + config.valentineName + "?";
-    }
-}
-
-// Initialize page
-window.onload = updateTitle;
-
 let noCount = 0;
+
+// Initialize Name and Music
+window.onload = () => {
+    document.getElementById('valentineTitle').innerText = "Will you be my Valentine, " + config.valentineName + "?";
+    document.getElementById('musicSource').src = config.musicUrl;
+    document.getElementById('bgMusic').load();
+};
 
 function handleNoClick() {
     const noBtn = document.getElementById('no-btn');
@@ -17,24 +13,19 @@ function handleNoClick() {
     const mainGif = document.getElementById('mainGif');
     const music = document.getElementById('bgMusic');
 
-    // Play music on interaction
-    if (music && music.paused) {
-        music.play().catch(err => console.log("Music play blocked by browser"));
-    }
+    // Play music on first click
+    if (music.paused) music.play();
 
-    // Change image and text
+    // Change text and image
     if (noCount < config.noMessages.length) {
         noBtn.innerText = config.noMessages[noCount];
-        
-        // Update image - ensuring we don't use a broken index
-        const nextImageIndex = Math.min(noCount + 1, config.images.length - 1);
-        mainGif.src = config.images[nextImageIndex];
+        mainGif.src = config.images[noCount + 1] || config.images[0];
     }
 
-    // Growth effect for Yes button
+    // Grow Yes button
     noCount++;
-    const newScale = 1 + (noCount * 0.4);
-    yesBtn.style.transform = `scale(${newScale})`;
+    const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+    yesBtn.style.fontSize = (currentSize * 1.5) + "px";
 }
 
 function handleYesClick() {
