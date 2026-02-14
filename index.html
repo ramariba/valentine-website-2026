@@ -4,60 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine? 💝</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="floating-elements"></div>
-
     <div class="container">
         <h1 id="valentineTitle"></h1>
         
-        <div id="musicControls" class="music-controls">
-            <button id="musicToggle" class="music-btn">🎵 Play Music</button>
-            <audio id="bgMusic" loop>
-                <source id="musicSource" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+        <div class="gif_container">
+            <img id="mainGif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWdtZzZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute Bear">
         </div>
 
-        <div class="question-section" id="question1">
-            <h2 id="question1Text"></h2>
-            <button class="cute-btn" onclick="handleYesClick()" id="yes-btn">Yes</button>
-            <button class="cute-btn" onclick="handleNoClick()" id="no-btn">No</button>
-            
-            <div class="secret-answer">
-                <button class="cute-btn special" id="secretAnswerBtn"></button>
-            </div>
+        <div class="buttons">
+            <button class="cute-btn yes-btn" onclick="handleYesClick()" id="yes-btn">Yes</button>
+            <button class="cute-btn no-btn" onclick="handleNoClick()" id="no-btn">No</button>
         </div>
 
-        <div class="question-section hidden" id="question2">
-            <h2 id="question2Text"></h2>
-            <div class="love-meter">
-                <input type="range" min="0" max="10000" value="100" class="slider" id="loveMeter">
-                <p>
-                    <span class="love-value-container"><span id="startText"></span> (<span id="loveValue">100</span>%)</span>
-                    <span id="extraLove" class="hidden"></span>
-                </p>
-            </div>
-            <button class="cute-btn" id="nextBtn">Next</button>
-        </div>
-
-        <div class="question-section hidden" id="question3">
-            <h2 id="question3Text"></h2>
-            <button class="cute-btn final-yes" id="yesBtn3">Yes</button>
-            <button class="cute-btn" id="noBtn3">No</button>
-        </div>
-
-        <div class="celebration hidden" id="celebration">
-            <h2 id="celebrationTitle"></h2>
-            <p class="celebration-text" id="celebrationMessage"></p>
-            <p class="celebration-text" id="celebrationEmojis"></p>
-        </div>
+        <button id="musicToggle" class="music-btn">🎵 Play Music</button>
+        <audio id="bgMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
     </div>
 
     <script src="config.js"></script>
-    <script src="theme.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
