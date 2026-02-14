@@ -1,8 +1,11 @@
 const config = {
-    valentineName: "JAANU ❤️", // Replace with your partner's name
+    valentineName: "JAANU ❤️", // Updated based on your latest screenshot
+    pageTitle: "Will You Be My Valentine? 🌹",
     images: [
-        "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpobjZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif",
-        "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpobjZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/pTf9nLpk0u9WqI9kRW/giphy.gif",
+        // This is your starting heart image
+        "https://raw.githubusercontent.com/ramariba/valentine-website-2026/main/image_4c0b85.jpg", 
+        // FIXED: Popular "Happy Valentine's Day" image from Unsplash
+        "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop",
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpobjZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/26hpKz78vLTS/giphy.gif",
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpobjZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/3o72EX5QZ9N9d51dqo/giphy.gif",
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpobjZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/vX9WcCiWwUF7G/giphy.gif",
