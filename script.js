@@ -1,41 +1,40 @@
-// Ensure config is loaded
-if (typeof config === 'undefined') {
-    console.error("Config not found! Make sure config.js is in the same folder.");
-} else {
-    document.getElementById('valentineTitle').innerText = "Will you be my Valentine, " + config.valentineName + "?";
+// Function to update the title with the name from config
+function updateTitle() {
+    const titleElement = document.getElementById('valentineTitle');
+    if (titleElement && config.valentineName) {
+        titleElement.innerText = "Will you be my Valentine, " + config.valentineName + "?";
+    }
 }
 
+// Initialize page
+window.onload = updateTitle;
+
 let noCount = 0;
-const music = document.getElementById('bgMusic');
 
 function handleNoClick() {
     const noBtn = document.getElementById('no-btn');
     const yesBtn = document.getElementById('yes-btn');
     const mainGif = document.getElementById('mainGif');
+    const music = document.getElementById('bgMusic');
 
-    // Start music on first click
-    if (music.paused) {
-        music.play().catch(e => console.log("Music playback blocked"));
+    // Play music on interaction
+    if (music && music.paused) {
+        music.play().catch(err => console.log("Music play blocked by browser"));
     }
 
-    // 1. Swap Messages and Images
+    // Change image and text
     if (noCount < config.noMessages.length) {
         noBtn.innerText = config.noMessages[noCount];
-        // Change image based on the specific mood
-        if (config.images[noCount + 1]) {
-            mainGif.src = config.images[noCount + 1];
-        }
+        
+        // Update image - ensuring we don't use a broken index
+        const nextImageIndex = Math.min(noCount + 1, config.images.length - 1);
+        mainGif.src = config.images[nextImageIndex];
     }
 
-    // 2. The Growing "Yes" Button Effect
+    // Growth effect for Yes button
     noCount++;
-    const newSize = 1 + (noCount * 0.4); 
-    yesBtn.style.transform = `scale(${newSize})`;
-    
-    // 3. Move "No" button slightly to make it playful
-    const x = Math.random() * 30 - 15;
-    const y = Math.random() * 30 - 15;
-    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    const newScale = 1 + (noCount * 0.4);
+    yesBtn.style.transform = `scale(${newScale})`;
 }
 
 function handleYesClick() {
