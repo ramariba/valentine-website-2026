@@ -1,30 +1,33 @@
-// Fill in the name and title from config
-document.getElementById('valentineTitle').innerText = `Will you be my Valentine, ${config.valentineName}?`;
-document.getElementById('musicSource').src = config.musicUrl;
+// 1. Make sure the name shows up
+document.getElementById('valentineTitle').innerText = "Will you be my Valentine, " + config.valentineName + "?";
 
-let noClickCount = 0;
+let noCount = 0;
 
 function handleNoClick() {
     const noBtn = document.getElementById('no-btn');
     const yesBtn = document.getElementById('yes-btn');
     
-    // Change "No" text
-    if (noClickCount < config.noMessages.length) {
-        noBtn.innerText = config.noMessages[noClickCount];
+    // Change "No" text based on your config messages
+    if (noCount < config.noMessages.length) {
+        noBtn.innerText = config.noMessages[noCount];
     }
     
-    // Make "Yes" button grow
-    noClickCount++;
-    const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
-    yesBtn.style.fontSize = (currentSize + 15) + "px";
-    yesBtn.style.padding = (currentSize) + "px " + (currentSize * 2) + "px";
+    // Make "Yes" button bigger
+    noCount++;
+    const newSize = 1.2 + (noCount * 0.5); 
+    yesBtn.style.transform = `scale(${newSize})`;
+    
+    // Optional: Move the "No" button slightly each time
+    const x = Math.random() * 20 - 10;
+    const y = Math.random() * 20 - 10;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
 }
 
 function handleYesClick() {
     window.location.href = "yes_page.html";
 }
 
-// Music Toggle
+// Simple music toggle
 const music = document.getElementById('bgMusic');
 document.getElementById('musicToggle').onclick = () => {
     if (music.paused) { music.play(); } else { music.pause(); }
