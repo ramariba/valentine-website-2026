@@ -1,23 +1,31 @@
+// Fill in the name and title from config
+document.getElementById('valentineTitle').innerText = `Will you be my Valentine, ${config.valentineName}?`;
+document.getElementById('musicSource').src = config.musicUrl;
+
 let noClickCount = 0;
 
 function handleNoClick() {
     const noBtn = document.getElementById('no-btn');
     const yesBtn = document.getElementById('yes-btn');
     
-    // Change "No" button text
+    // Change "No" text
     if (noClickCount < config.noMessages.length) {
         noBtn.innerText = config.noMessages[noClickCount];
-    } else {
-        noBtn.innerText = config.noMessages[config.noMessages.length - 1];
     }
     
     // Make "Yes" button grow
     noClickCount++;
-    const newSize = 16 + (noClickCount * 20); // Increases size each click
-    yesBtn.style.fontSize = `${newSize}px`;
-    yesBtn.style.padding = `${newSize/2}px ${newSize}px`;
+    const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+    yesBtn.style.fontSize = (currentSize + 15) + "px";
+    yesBtn.style.padding = (currentSize) + "px " + (currentSize * 2) + "px";
 }
 
 function handleYesClick() {
-    window.location.href = "yes_page.html"; // Make sure you have a yes_page.html file!
+    window.location.href = "yes_page.html";
 }
+
+// Music Toggle
+const music = document.getElementById('bgMusic');
+document.getElementById('musicToggle').onclick = () => {
+    if (music.paused) { music.play(); } else { music.pause(); }
+};
