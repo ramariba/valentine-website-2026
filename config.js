@@ -1,5 +1,5 @@
 const config = {
-    valentineName: "JAANU ❤️", // Updated based on your latest screenshot
+    valentineName: "JAANU❤️", // Updated based on your latest screenshot
     pageTitle: "Will You Be My Valentine? 🌹",
     images: [
         // This is your starting heart image
