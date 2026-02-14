@@ -4,50 +4,52 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop');
+    /* Red Roses Background */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 .container {
     background: rgba(255, 255, 255, 0.9);
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 2rem;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     text-align: center;
     border: 3px solid #ff4d6d;
-    max-width: 90%;
+    max-width: 400px;
+    z-index: 10;
 }
 
 h1 {
     font-family: 'Dancing Script', cursive;
     color: #d80032;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
 }
 
 .gif_container img {
-    max-width: 250px;
+    max-width: 100%;
     border-radius: 1rem;
-    margin-bottom: 2rem;
+    margin: 1.5rem 0;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .cute-btn {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border-radius: 5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
     border: none;
     cursor: pointer;
     font-weight: 600;
-    transition: transform 0.2s ease;
 }
 
 .yes-btn { background-color: #4caf50; color: white; }
