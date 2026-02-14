@@ -1,5 +1,5 @@
 const config = {
-    valentineName: "JAANU", // Replace with your partner's name
+    valentineName: "JAANU ❤️", // Replace with your partner's name
     images: [
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpobjZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif",
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpobjZ4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmPTAmY3Q9cw/pTf9nLpk0u9WqI9kRW/giphy.gif",
